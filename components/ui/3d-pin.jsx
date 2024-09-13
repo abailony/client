@@ -7,7 +7,7 @@ import Link from "next/link";
 export const PinContainer = ({
   children,
   title,
-  href,
+  
   className,
   containerClassName
 }) => {
@@ -25,7 +25,7 @@ export const PinContainer = ({
       className={cn("relative group/pin z-50  cursor-pointer", containerClassName)}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      href={href || "/"}>
+      href="">
       <div
         style={{
           perspective: "1000px",
@@ -40,14 +40,14 @@ export const PinContainer = ({
           <div className={cn(" relative z-50 ", className)}>{children}</div>
         </div>
       </div>
-      <PinPerspective title={title} href={href} />
+      <PinPerspective title={title}  />
     </Link>)
   );
 };
 
 export const PinPerspective = ({
   title,
-  href
+  
 }) => {
   return (
     (<motion.div
@@ -55,7 +55,7 @@ export const PinPerspective = ({
       <div className=" w-full h-full -mt-7 flex-none  inset-0">
         <div className="absolute top-0 inset-x-0  flex justify-center">
           <a
-            href={href}
+            
             target={"_blank"}
             className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
             <span
