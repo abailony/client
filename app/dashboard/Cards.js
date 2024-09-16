@@ -36,21 +36,22 @@ export default function WobbleCardDemo() {
           If someone yells "stop!", goes limp, or taps out, the fight is over.
         </p>
       </WobbleCard>
-      <WobbleCard
-        containerClassName="col-span-1 md:col-span-2 lg:col-span-3 bg-blue-900 min-h-[400px] md:min-h-[300px]"
-      >
-        <div className="max-w-sm md:max-w-md lg:max-w-lg">
-          <h2 className="text-left text-base sm:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Signup for blazing-fast cutting-edge state of the art Gippity AI
-            wrapper today!
-          </h2>
-          <p className="mt-4 text-left text-sm sm:text-base text-neutral-200">
-            With over 100,000 monthly active bot users, Gippity AI is the most
-            popular AI platform for developers.
-          </p>
-        </div>
-        
-      </WobbleCard>
+      <div className="col-span-1 md:col-span-2 lg:col-span-3 min-h-[400px] md:min-h-[300px]" onClick={() => window.location.href = "/try"}>
+        <WobbleCard
+          containerClassName="w-full h-full bg-blue-900 "
+          
+        >
+          <div className="max-w-sm md:max-w-md lg:max-w-lg">
+            <h2 className="text-left text-base sm:text-xl lg:text-2xl xl:text-3xl font-semibold tracking-[-0.015em] text-white">
+              Campaigns
+            </h2>
+            <p className="mt-4 text-left text-sm sm:text-base text-neutral-200">
+              Access All your Campaigns
+            </p>
+          </div>
+          
+        </WobbleCard>
+      </div>
     </div>
   );
 }

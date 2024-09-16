@@ -7,7 +7,7 @@ export default function AnimatedPinDemo() {
 
   let list = [{title : "accternity",h3:"Hello",description: "hello to our"
 
-  }
+  },{title : "accternity2",h3:"Hello2",description: "hello to our 2"},{title : "accternity2",h3:"Hello2",description: "hello to our 2"},{title : "accternity2",h3:"Hello2",description: "hello to our 2"},{title : "accternity2",h3:"Hello2",description: "hello to our 2"},{title : "accternity2",h3:"Hello2",description: "hello to our 2"},{title : "accternity2",h3:"Hello2",description: "hello to our 2"},{title : "accternity2",h3:"Hello2",description: "hello to our 2"},{title : "accternity2",h3:"Hello2",description: "hello to our 2"}
   
 ]
 

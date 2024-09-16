@@ -7,11 +7,11 @@ import AnimatedModalDemo from '@/app/trial/page';
 export default function ItemLists({items}) {
 
   return (
-    <div>
-      <h1 className="text-lg">Your Adverts data</h1>
+    <div className='flex flex-wrap items-center justify-center'>
+      
       {
         items.map((item) => (
-          <div>
+          <div className='h-[60vh]'>
             <AnimatedModalDemo modaltrigger={
             <div className="h-[40rem] w-full flex items-center justify-center "
               onClick={ () => {
