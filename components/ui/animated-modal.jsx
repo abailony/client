@@ -56,9 +56,12 @@ export const ModalBody = ({
 
   useEffect(() => {
     if (open) {
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollbarWidth}px`; // Add padding to compensate for scrollbar
     } else {
       document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px"; // Reset padding
     }
   }, [open]);
 
@@ -67,7 +70,7 @@ export const ModalBody = ({
   useOutsideClick(modalRef, () => setOpen(false));
 
   return (
-    (<AnimatePresence>
+    <AnimatePresence>
       {open && (
         <motion.div
           initial={{
@@ -81,7 +84,7 @@ export const ModalBody = ({
             opacity: 0,
             backdropFilter: "blur(0px)",
           }}
-          className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50">
+          className="fixed [perspective:1000px] [transform-style:preserve-3d] inset-0 h-full w-full  flex items-center justify-center z-50">
           <Overlay />
 
           <motion.div
@@ -117,7 +120,7 @@ export const ModalBody = ({
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>)
+    </AnimatePresence>
   );
 };
 

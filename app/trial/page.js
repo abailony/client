@@ -17,7 +17,7 @@ export default function AnimatedModalDemo({modaltrigger}) {
   return (
     (<div className="py-40  flex items-center justify-center">
       <Modal>
-        <ModalTrigger className="my-custom-button-class">
+        <ModalTrigger className="z-40">
             {modaltrigger}
         </ModalTrigger>
 
